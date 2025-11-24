@@ -3,15 +3,15 @@ import * as React from "react";
 function getStrictContext<T>(
   name?: string,
 ): readonly [
-    ({
-      value,
-      children,
-    }: {
-      value: T;
-      children?: React.ReactNode;
-    }) => React.JSX.Element,
-    () => T,
-  ] {
+  ({
+    value,
+    children,
+  }: {
+    value: T;
+    children?: React.ReactNode;
+  }) => React.JSX.Element,
+  () => T,
+] {
   const Context = React.createContext<T | undefined>(undefined);
 
   const Provider = ({
