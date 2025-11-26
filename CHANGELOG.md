@@ -10,13 +10,58 @@
 > [!CAUTION]
 Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit the project's popularity for potentially malicious purposes.
 
+## 2025-11-26
+
+### 🚀 Updated Scripts
+
+  - Joplin Server: Increase RAM for LXC [@tremor021](https://github.com/tremor021) ([#9460](https://github.com/community-scripts/ProxmoxVE/pull/9460))
+
+  - #### 🐞 Bug Fixes
+
+    - Fix Open WebUI update logic (swap upgrade/install) [@camcop](https://github.com/camcop) ([#9461](https://github.com/community-scripts/ProxmoxVE/pull/9461))
+
+## 2025-11-25
+
+### 🚀 Updated Scripts
+
+  - #### 🐞 Bug Fixes
+
+    - Open WebUI: Change install command to upgrade for Open-WebUI [@tremor021](https://github.com/tremor021) ([#9448](https://github.com/community-scripts/ProxmoxVE/pull/9448))
+    - core: set default LANG in locale configuration [@MickLesk](https://github.com/MickLesk) ([#9440](https://github.com/community-scripts/ProxmoxVE/pull/9440))
+    - documenso: switch to npm peer-.deps to get build running [@MickLesk](https://github.com/MickLesk) ([#9441](https://github.com/community-scripts/ProxmoxVE/pull/9441))
+    - Refactor Asterisk installation process [@MickLesk](https://github.com/MickLesk) ([#9429](https://github.com/community-scripts/ProxmoxVE/pull/9429))
+    - Fix the mikrotik VM installer after they reformatted their downloads page [@paul-ridgway](https://github.com/paul-ridgway) ([#9434](https://github.com/community-scripts/ProxmoxVE/pull/9434))
+    - paperless: patch consume to uv [@MickLesk](https://github.com/MickLesk) ([#9425](https://github.com/community-scripts/ProxmoxVE/pull/9425))
+
+  - #### ✨ New Features
+
+    - add Zabbix version selection to install and update scripts [@MickLesk](https://github.com/MickLesk) ([#9430](https://github.com/community-scripts/ProxmoxVE/pull/9430))
+
+### 🧰 Maintenance
+
+  - #### 📂 Github
+
+    - gh: update supported PVE Version [@MickLesk](https://github.com/MickLesk) ([#9422](https://github.com/community-scripts/ProxmoxVE/pull/9422))
+
 ## 2025-11-24
 
 ### 🚀 Updated Scripts
 
   - #### 🐞 Bug Fixes
 
+    - core: remove uv cache clean command [@MickLesk](https://github.com/MickLesk) ([#9413](https://github.com/community-scripts/ProxmoxVE/pull/9413))
     - Joplin-Server: Bump Node.js version from 22 to 24 [@tremor021](https://github.com/tremor021) ([#9405](https://github.com/community-scripts/ProxmoxVE/pull/9405))
+
+  - #### 🔧 Refactor
+
+    - [Fix]: Wizarr DB error during install [@vhsdream](https://github.com/vhsdream) ([#9415](https://github.com/community-scripts/ProxmoxVE/pull/9415))
+
+### 🌐 Website
+
+  - #### 📝 Script Information
+
+    - Gitea: Update website [@tremor021](https://github.com/tremor021) ([#9406](https://github.com/community-scripts/ProxmoxVE/pull/9406))
+    - huntarr: disable on website during install issues [@MickLesk](https://github.com/MickLesk) ([#9403](https://github.com/community-scripts/ProxmoxVE/pull/9403))
 
 ## 2025-11-23
 
