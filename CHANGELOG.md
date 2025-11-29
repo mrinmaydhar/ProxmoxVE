@@ -10,7 +10,37 @@
 > [!CAUTION]
 Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit the project's popularity for potentially malicious purposes.
 
+## 2025-11-29
+
+## 2025-11-28
+
+### 🚀 Updated Scripts
+
+  - #### 🐞 Bug Fixes
+
+    - Apache-guacamole: fixed to early rm [@mtorazzi](https://github.com/mtorazzi) ([#9492](https://github.com/community-scripts/ProxmoxVE/pull/9492))
+
+  - #### 💥 Breaking Changes
+
+    - Remove: Habitica [@MickLesk](https://github.com/MickLesk) ([#9489](https://github.com/community-scripts/ProxmoxVE/pull/9489))
+
 ## 2025-11-27
+
+### 🆕 New Scripts
+
+  - Qdrant ([#9465](https://github.com/community-scripts/ProxmoxVE/pull/9465))
+
+### 🚀 Updated Scripts
+
+  - #### 💥 Breaking Changes
+
+    - Upgrade pve-scripts-local to node 24 [@michelroegl-brunner](https://github.com/michelroegl-brunner) ([#9457](https://github.com/community-scripts/ProxmoxVE/pull/9457))
+
+### 🌐 Website
+
+  - #### 🐞 Bug Fixes
+
+    - PBS: fix typo [@joshuaharmsen845](https://github.com/joshuaharmsen845) ([#9482](https://github.com/community-scripts/ProxmoxVE/pull/9482))
 
 ## 2025-11-26
 
