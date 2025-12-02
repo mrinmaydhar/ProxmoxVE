@@ -57,7 +57,7 @@ pveversion
 ### 2. Network Connectivity
 ```bash
 # Test GitHub access
-curl -I https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/debian.sh
+curl -I https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/debian.sh
 
 # Test internet connectivity
 ping -c 1 1.1.1.1
@@ -94,7 +94,7 @@ df -h
 
 **Simplest form:**
 ```bash
-var_hostname=myserver bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/debian.sh)"
+var_hostname=myserver bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVE/main/ct/debian.sh)"
 ```
 
 ### Complete Configuration Example
@@ -117,7 +117,7 @@ var_nesting=1 \
 var_tags=production,automated \
 var_protection=yes \
 var_verbose=no \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/debian.sh)"
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/debian.sh)"
 
 echo "✓ Container deployed successfully"
 ```
@@ -126,7 +126,7 @@ echo "✓ Container deployed successfully"
 
 **Step 1: Create defaults once (interactive)**
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/pihole.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/pihole.sh)"
 # Select "Advanced Settings" → Configure → Save as "App Defaults"
 ```
 
@@ -136,7 +136,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/Proxmo
 # deploy-with-defaults.sh
 
 # App defaults are loaded automatically
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/pihole.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/pihole.sh)"
 # Script will use /usr/local/community-scripts/defaults/pihole.vars
 ```
 
@@ -159,7 +159,7 @@ for app in "${apps[@]}"; do
   var_hostname="$app-container" \
   var_cpu=2 \
   var_ram=2048 \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${app}.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${app}.sh)"
 
   echo "✓ $app deployed"
   sleep 5  # Wait between deployments
@@ -203,7 +203,7 @@ for app in "${!CONTAINERS[@]}"; do
   var_ipv6_method=none \
   var_ssh=yes \
   var_tags="$tags,automated" \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${app}.sh)" 2>&1 | tee "deploy-${app}.log"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${app}.sh)" 2>&1 | tee "deploy-${app}.log"
 
   if [ $? -eq 0 ]; then
     echo "✓ $app deployed successfully"
@@ -238,7 +238,7 @@ deploy_container() {
   var_disk="$disk" \
   var_hostname="$app" \
   var_net=dhcp \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${app}.sh)" \
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${app}.sh)" \
     &> "deploy-${app}.log"
 
   echo "[$app] ✓ Completed"
@@ -283,7 +283,7 @@ echo "All deployments complete!"
         var_net=dhcp \
         var_ssh=yes \
         var_tags=ansible,automated \
-        bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/debian.sh)"
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/debian.sh)"
       args:
         executable: /bin/bash
       register: deploy_result
@@ -340,7 +340,7 @@ echo "All deployments complete!"
         var_ssh=yes \
         var_ssh_authorized_key="{{ ssh_key }}" \
         var_tags="{{ item.tags }},ansible" \
-        bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/{{ item.name }}.sh)"
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/{{ item.name }}.sh)"
       args:
         executable: /bin/bash
       loop: "{{ containers }}"
@@ -392,7 +392,7 @@ resource "null_resource" "deploy_container" {
       "var_disk=${each.value.disk}",
       "var_hostname=${each.key}",
       "var_net=dhcp",
-      "bash -c \"$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${each.value.template}.sh)\""
+      "bash -c \"$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${each.value.template}.sh)\""
     ]
 
     connection {
@@ -473,7 +473,7 @@ jobs:
             var_net=dhcp \
             var_ssh=yes \
             var_tags=ci-cd,automated \
-            bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${{ github.event.inputs.container_type }}.sh)"
+            bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${{ github.event.inputs.container_type }}.sh)"
 
       - name: Notify deployment status
         if: success()
@@ -507,7 +507,7 @@ deploy_container:
         var_hostname=gitlab-ci-container \
         var_net=dhcp \
         var_tags=gitlab-ci,automated \
-        bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/debian.sh)"
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/debian.sh)"
       EOF
   only:
     - main
@@ -539,7 +539,7 @@ deploy_container() {
   var_hostname="$HOSTNAME" \
   var_net=dhcp \
   var_ssh=yes \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${APP}.sh)" 2>&1 | tee deploy.log
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${APP}.sh)" 2>&1 | tee deploy.log
 
   return ${PIPESTATUS[0]}
 }
@@ -631,7 +631,7 @@ deploy() {
   var_hostname="$HOSTNAME" \
   var_cpu=4 \
   var_ram=4096 \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${APP}.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${APP}.sh)"
   return $?
 }
 
@@ -734,7 +734,7 @@ deploy_secure() {
   var_protection=yes \
   var_tags=production,secure,automated \
   var_verbose=no \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${APP}.sh)" 2>&1 | tee -a "$LOG_FILE"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${APP}.sh)" 2>&1 | tee -a "$LOG_FILE"
 
   if [ ${PIPESTATUS[0]} -eq 0 ]; then
     log "✓ Deployment successful"
@@ -799,7 +799,7 @@ SSH_KEYS=$(load_ssh_keys)
 var_ssh=yes \
 var_ssh_authorized_key="$SSH_KEYS" \
 var_hostname=multi-key-server \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/debian.sh)"
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/debian.sh)"
 ```
 
 ---
@@ -878,7 +878,7 @@ deploy_from_config() {
     var_ssh=yes \
     var_tags="$tags,automated" \
     var_protection=yes \
-      bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/ct/${app}.sh)"
+      bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrinmaydhar/ProxmoxVED/main/ct/${app}.sh)"
 
     if [ $? -eq 0 ]; then
       log_success "Deployed: $name"

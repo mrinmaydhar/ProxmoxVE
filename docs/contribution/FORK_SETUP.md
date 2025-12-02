@@ -98,7 +98,7 @@ The script updates these documentation files:
 ### Keep Your Fork Updated
 ```bash
 # Add upstream if you haven't already
-git remote add upstream https://github.com/community-scripts/ProxmoxVE.git
+git remote add upstream https://github.com/mrinmaydhar/ProxmoxVE.git
 
 # Get latest from upstream
 git fetch upstream

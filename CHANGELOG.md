@@ -14,73 +14,73 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
 ### 🆕 New Scripts
 
-  - Snowshare ([#9578](https://github.com/community-scripts/ProxmoxVE/pull/9578))
+  - Snowshare ([#9578](https://github.com/mrinmaydhar/ProxmoxVE/pull/9578))
 
 ### 🚀 Updated Scripts
 
-  - NetVisor: patch systemd file to fix new OIDC config [@vhsdream](https://github.com/vhsdream) ([#9562](https://github.com/community-scripts/ProxmoxVE/pull/9562))
-- Refactor: BookStack [@tremor021](https://github.com/tremor021) ([#9567](https://github.com/community-scripts/ProxmoxVE/pull/9567))
+  - NetVisor: patch systemd file to fix new OIDC config [@vhsdream](https://github.com/vhsdream) ([#9562](https://github.com/mrinmaydhar/ProxmoxVE/pull/9562))
+- Refactor: BookStack [@tremor021](https://github.com/tremor021) ([#9567](https://github.com/mrinmaydhar/ProxmoxVE/pull/9567))
 
   - #### 🐞 Bug Fixes
 
-    - Booklore: Downgrad Java from 25 to 21 [@Pr0mises](https://github.com/Pr0mises) ([#9566](https://github.com/community-scripts/ProxmoxVE/pull/9566))
+    - Booklore: Downgrad Java from 25 to 21 [@Pr0mises](https://github.com/Pr0mises) ([#9566](https://github.com/mrinmaydhar/ProxmoxVE/pull/9566))
 
   - #### ✨ New Features
 
-    - Add auth via requirepass to Valkey [@pshankinclarke](https://github.com/pshankinclarke) ([#9570](https://github.com/community-scripts/ProxmoxVE/pull/9570))
+    - Add auth via requirepass to Valkey [@pshankinclarke](https://github.com/pshankinclarke) ([#9570](https://github.com/mrinmaydhar/ProxmoxVE/pull/9570))
 
   - #### 🔧 Refactor
 
-    - Refactor: Paperless-AI [@MickLesk](https://github.com/MickLesk) ([#9588](https://github.com/community-scripts/ProxmoxVE/pull/9588))
-    - Refactor: AdventureLog [@tremor021](https://github.com/tremor021) ([#9583](https://github.com/community-scripts/ProxmoxVE/pull/9583))
-    - CommaFeed: Bump Java and service file [@tremor021](https://github.com/tremor021) ([#9564](https://github.com/community-scripts/ProxmoxVE/pull/9564))
-    - Refactor: Docmost [@tremor021](https://github.com/tremor021) ([#9563](https://github.com/community-scripts/ProxmoxVE/pull/9563))
-    - Cloudflared: Add repo via helper function [@tremor021](https://github.com/tremor021) ([#9565](https://github.com/community-scripts/ProxmoxVE/pull/9565))
+    - Refactor: Paperless-AI [@MickLesk](https://github.com/MickLesk) ([#9588](https://github.com/mrinmaydhar/ProxmoxVE/pull/9588))
+    - Refactor: AdventureLog [@tremor021](https://github.com/tremor021) ([#9583](https://github.com/mrinmaydhar/ProxmoxVE/pull/9583))
+    - CommaFeed: Bump Java and service file [@tremor021](https://github.com/tremor021) ([#9564](https://github.com/mrinmaydhar/ProxmoxVE/pull/9564))
+    - Refactor: Docmost [@tremor021](https://github.com/tremor021) ([#9563](https://github.com/mrinmaydhar/ProxmoxVE/pull/9563))
+    - Cloudflared: Add repo via helper function [@tremor021](https://github.com/tremor021) ([#9565](https://github.com/mrinmaydhar/ProxmoxVE/pull/9565))
 
 ### 🧰 Maintenance
 
   - #### 📝 Documentation
 
-    - add configuration and deployment guides to docs [@MickLesk](https://github.com/MickLesk) ([#9591](https://github.com/community-scripts/ProxmoxVE/pull/9591))
+    - add configuration and deployment guides to docs [@MickLesk](https://github.com/MickLesk) ([#9591](https://github.com/mrinmaydhar/ProxmoxVE/pull/9591))
 
 ## 2025-12-01
 
 ### 🆕 New Scripts
 
-  - Wanderer ([#9556](https://github.com/community-scripts/ProxmoxVE/pull/9556))
-- core: add cloud-init.func library for VM configuration [@MickLesk](https://github.com/MickLesk) ([#9538](https://github.com/community-scripts/ProxmoxVE/pull/9538))
+  - Wanderer ([#9556](https://github.com/mrinmaydhar/ProxmoxVE/pull/9556))
+- core: add cloud-init.func library for VM configuration [@MickLesk](https://github.com/MickLesk) ([#9538](https://github.com/mrinmaydhar/ProxmoxVE/pull/9538))
 
 ### 🚀 Updated Scripts
 
   - #### 🐞 Bug Fixes
 
-    - core: sanitize appname for certificate generation [@tremor021](https://github.com/tremor021) ([#9552](https://github.com/community-scripts/ProxmoxVE/pull/9552))
-    - Fix Django superuser creation failing with ImproperlyConfigured error [@Copilot](https://github.com/Copilot) ([#9554](https://github.com/community-scripts/ProxmoxVE/pull/9554))
+    - core: sanitize appname for certificate generation [@tremor021](https://github.com/tremor021) ([#9552](https://github.com/mrinmaydhar/ProxmoxVE/pull/9552))
+    - Fix Django superuser creation failing with ImproperlyConfigured error [@Copilot](https://github.com/Copilot) ([#9554](https://github.com/mrinmaydhar/ProxmoxVE/pull/9554))
 
   - #### ✨ New Features
 
-    - Bump Baikal to deb13 [@MickLesk](https://github.com/MickLesk) ([#9544](https://github.com/community-scripts/ProxmoxVE/pull/9544))
-    - Enhance MariaDB version fallback logic [@MickLesk](https://github.com/MickLesk) ([#9545](https://github.com/community-scripts/ProxmoxVE/pull/9545))
+    - Bump Baikal to deb13 [@MickLesk](https://github.com/MickLesk) ([#9544](https://github.com/mrinmaydhar/ProxmoxVE/pull/9544))
+    - Enhance MariaDB version fallback logic [@MickLesk](https://github.com/MickLesk) ([#9545](https://github.com/mrinmaydhar/ProxmoxVE/pull/9545))
 
   - #### 💥 Breaking Changes
 
-    - Refactor: Healthchecks [@MickLesk](https://github.com/MickLesk) ([#9188](https://github.com/community-scripts/ProxmoxVE/pull/9188))
+    - Refactor: Healthchecks [@MickLesk](https://github.com/MickLesk) ([#9188](https://github.com/mrinmaydhar/ProxmoxVE/pull/9188))
 
   - #### 🔧 Refactor
 
-    - Refactor: Mealie [@MickLesk](https://github.com/MickLesk) ([#9308](https://github.com/community-scripts/ProxmoxVE/pull/9308))
+    - Refactor: Mealie [@MickLesk](https://github.com/MickLesk) ([#9308](https://github.com/mrinmaydhar/ProxmoxVE/pull/9308))
 
 ### 🧰 Maintenance
 
   - #### 📂 Github
 
-    - add comprehensive documentation (core, develop, functions, technical guide, contributor guide) [@MickLesk](https://github.com/MickLesk) ([#9537](https://github.com/community-scripts/ProxmoxVE/pull/9537))
+    - add comprehensive documentation (core, develop, functions, technical guide, contributor guide) [@MickLesk](https://github.com/MickLesk) ([#9537](https://github.com/mrinmaydhar/ProxmoxVE/pull/9537))
 
 ### 🌐 Website
 
   - #### 📝 Script Information
 
-    - update selfhst icon-URLs to use @master path [@MickLesk](https://github.com/MickLesk) ([#9543](https://github.com/community-scripts/ProxmoxVE/pull/9543))
+    - update selfhst icon-URLs to use @master path [@MickLesk](https://github.com/MickLesk) ([#9543](https://github.com/mrinmaydhar/ProxmoxVE/pull/9543))
 
 ## 2025-11-30
 
@@ -88,31 +88,31 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
   - #### 🐞 Bug Fixes
 
-    - fix(recyclarr): remove update script systemctl commands [@vidonnus](https://github.com/vidonnus) ([#9522](https://github.com/community-scripts/ProxmoxVE/pull/9522))
+    - fix(recyclarr): remove update script systemctl commands [@vidonnus](https://github.com/vidonnus) ([#9522](https://github.com/mrinmaydhar/ProxmoxVE/pull/9522))
 
   - #### 🔧 Refactor
 
-    - Refactor: Actual Budget [@tremor021](https://github.com/tremor021) ([#9518](https://github.com/community-scripts/ProxmoxVE/pull/9518))
+    - Refactor: Actual Budget [@tremor021](https://github.com/tremor021) ([#9518](https://github.com/mrinmaydhar/ProxmoxVE/pull/9518))
 
 ## 2025-11-29
 
 ### 🆕 New Scripts
 
-  - Valkey ([#9510](https://github.com/community-scripts/ProxmoxVE/pull/9510))
+  - Valkey ([#9510](https://github.com/mrinmaydhar/ProxmoxVE/pull/9510))
 
 ### 🚀 Updated Scripts
 
   - #### 🐞 Bug Fixes
 
-    - Fix duplicate ORIGIN in .env for OpenArchiver install script [@Copilot](https://github.com/Copilot) ([#9503](https://github.com/community-scripts/ProxmoxVE/pull/9503))
+    - Fix duplicate ORIGIN in .env for OpenArchiver install script [@Copilot](https://github.com/Copilot) ([#9503](https://github.com/mrinmaydhar/ProxmoxVE/pull/9503))
 
   - #### 💥 Breaking Changes
 
-    - Remove: Documenso [@michelroegl-brunner](https://github.com/michelroegl-brunner) ([#9507](https://github.com/community-scripts/ProxmoxVE/pull/9507))
+    - Remove: Documenso [@michelroegl-brunner](https://github.com/michelroegl-brunner) ([#9507](https://github.com/mrinmaydhar/ProxmoxVE/pull/9507))
 
 ### 🌐 Website
 
-  - Update Discord link on website [@tremor021](https://github.com/tremor021) ([#9499](https://github.com/community-scripts/ProxmoxVE/pull/9499))
+  - Update Discord link on website [@tremor021](https://github.com/tremor021) ([#9499](https://github.com/mrinmaydhar/ProxmoxVE/pull/9499))
 
 ## 2025-11-28
 
