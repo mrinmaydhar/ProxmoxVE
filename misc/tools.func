@@ -1535,9 +1535,10 @@ check_for_gh_release() {
 # ------------------------------------------------------------------------------
 create_self_signed_cert() {
   local APP_NAME="${1:-${APPLICATION}}"
-  local CERT_DIR="/etc/ssl/${APP_NAME}"
-  local CERT_KEY="${CERT_DIR}/${APP_NAME}.key"
-  local CERT_CRT="${CERT_DIR}/${APP_NAME}.crt"
+  local APP_NAME_LC=$(echo "${APP_NAME,,}" | tr -d ' ')
+  local CERT_DIR="/etc/ssl/${APP_NAME_LC}"
+  local CERT_KEY="${CERT_DIR}/${APP_NAME_LC}.key"
+  local CERT_CRT="${CERT_DIR}/${APP_NAME_LC}.crt"
 
   if [[ -f "$CERT_CRT" && -f "$CERT_KEY" ]]; then
     return 0
@@ -1551,7 +1552,8 @@ create_self_signed_cert() {
 
   mkdir -p "$CERT_DIR"
   $STD openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 \
-    -subj "/C=US/ST=State/L=City/O=Organization/CN=${APP_NAME}" \
+    -subj "/CN=${APP_NAME}" \
+    -addext "subjectAltName=DNS:${APP_NAME}" \
     -keyout "$CERT_KEY" \
     -out "$CERT_CRT" || {
     msg_error "Failed to create self-signed certificate"
@@ -2939,9 +2941,16 @@ setup_mariadb() {
   # Resolve "latest" to actual version
   if [[ "$MARIADB_VERSION" == "latest" ]]; then
     if ! curl -fsI --max-time 10 http://mirror.mariadb.org/repo/ >/dev/null 2>&1; then
-      msg_warn "MariaDB mirror not reachable - trying cached package list fallback"
-      # Fallback: try to use a known stable version
-      MARIADB_VERSION="12.0"
+      msg_warn "MariaDB mirror not reachable - trying mariadb_repo_setup fallback"
+      # Try using official mariadb_repo_setup script as fallback
+      if curl -fsSL --max-time 15 https://r.mariadb.com/downloads/mariadb_repo_setup 2>/dev/null | bash -s -- --skip-verify >/dev/null 2>&1; then
+        msg_ok "MariaDB repository configured via mariadb_repo_setup"
+        # Extract version from configured repo
+        MARIADB_VERSION=$(grep -oP 'repo/\K[0-9]+\.[0-9]+\.[0-9]+' /etc/apt/sources.list.d/mariadb.list 2>/dev/null | head -n1 || echo "12.2")
+      else
+        msg_warn "mariadb_repo_setup failed - using hardcoded fallback version"
+        MARIADB_VERSION="12.2"
+      fi
     else
       MARIADB_VERSION=$(curl -fsSL --max-time 15 http://mirror.mariadb.org/repo/ 2>/dev/null |
         grep -Eo '[0-9]+\.[0-9]+\.[0-9]+/' |
@@ -2951,8 +2960,14 @@ setup_mariadb() {
         head -n1 || echo "")
 
       if [[ -z "$MARIADB_VERSION" ]]; then
-        msg_warn "Could not parse latest GA MariaDB version from mirror - using fallback"
-        MARIADB_VERSION="12.0"
+        msg_warn "Could not parse latest GA MariaDB version from mirror - trying mariadb_repo_setup"
+        if curl -fsSL --max-time 15 https://r.mariadb.com/downloads/mariadb_repo_setup 2>/dev/null | bash -s -- --skip-verify >/dev/null 2>&1; then
+          msg_ok "MariaDB repository configured via mariadb_repo_setup"
+          MARIADB_VERSION=$(grep -oP 'repo/\K[0-9]+\.[0-9]+\.[0-9]+' /etc/apt/sources.list.d/mariadb.list 2>/dev/null | head -n1 || echo "12.2")
+        else
+          msg_warn "mariadb_repo_setup failed - using hardcoded fallback version"
+          MARIADB_VERSION="12.2"
+        fi
       fi
     fi
   fi

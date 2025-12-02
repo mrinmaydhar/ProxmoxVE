@@ -37,8 +37,9 @@ function update_script() {
     mv /opt/baikal /opt/baikal-backup
     msg_ok "Backed up data"
 
-    fetch_and_deploy_gh_release "baikal" "sabre-io/Baikal"
+    PHP_APACHE="YES" PHP_MODULE="pgsql,curl" PHP_VERSION="8.3" setup_php
     setup_composer
+    fetch_and_deploy_gh_release "baikal" "sabre-io/Baikal"
 
     msg_info "Configuring Baikal"
     cp -r /opt/baikal-backup/config/baikal.yaml /opt/baikal/config/
