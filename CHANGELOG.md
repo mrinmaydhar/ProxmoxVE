@@ -14,11 +14,11 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
 ### 🚀 Updated Scripts
 
-  - fix(opnsense-vm): improve script  and add single-interface mode [@AlphaLawless](https://github.com/AlphaLawless) ([#9614](https://github.com/community-scripts/ProxmoxVE/pull/9614))
+  - fix(opnsense-vm): improve script  and add single-interface mode [@AlphaLawless](https://github.com/AlphaLawless) ([#9614](https://github.com/mrinmaydhar/ProxmoxVE/pull/9614))
 
   - #### 🐞 Bug Fixes
 
-    - go2rtc: Add WorkingDirectory to go2rtc service configuration [@tremor021](https://github.com/tremor021) ([#9618](https://github.com/community-scripts/ProxmoxVE/pull/9618))
+    - go2rtc: Add WorkingDirectory to go2rtc service configuration [@tremor021](https://github.com/tremor021) ([#9618](https://github.com/mrinmaydhar/ProxmoxVE/pull/9618))
 
 ## 2025-12-02
 
@@ -33,23 +33,23 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
   - #### 🐞 Bug Fixes
 
-    - Matterbridge: Fix ExecStart command in service install script to allow childbridge mode [@jonalbr](https://github.com/jonalbr) ([#9603](https://github.com/community-scripts/ProxmoxVE/pull/9603))
-    - Open-webui add .env backup and restore functionality from older versions [@DrDonoso](https://github.com/DrDonoso) ([#9592](https://github.com/community-scripts/ProxmoxVE/pull/9592))
-    - Booklore: Downgrad Java from 25 to 21 [@Pr0mises](https://github.com/Pr0mises) ([#9566](https://github.com/community-scripts/ProxmoxVE/pull/9566))
+    - Matterbridge: Fix ExecStart command in service install script to allow childbridge mode [@jonalbr](https://github.com/jonalbr) ([#9603](https://github.com/mrinmaydhar/ProxmoxVE/pull/9603))
+    - Open-webui add .env backup and restore functionality from older versions [@DrDonoso](https://github.com/DrDonoso) ([#9592](https://github.com/mrinmaydhar/ProxmoxVE/pull/9592))
+    - Booklore: Downgrad Java from 25 to 21 [@Pr0mises](https://github.com/Pr0mises) ([#9566](https://github.com/mrinmaydhar/ProxmoxVE/pull/9566))
 
   - #### ✨ New Features
 
-    - Set Valkey memory and eviction defaults [@pshankinclarke](https://github.com/pshankinclarke) ([#9602](https://github.com/community-scripts/ProxmoxVE/pull/9602))
-    - Add auth via requirepass to Valkey [@pshankinclarke](https://github.com/pshankinclarke) ([#9570](https://github.com/community-scripts/ProxmoxVE/pull/9570))
+    - Set Valkey memory and eviction defaults [@pshankinclarke](https://github.com/pshankinclarke) ([#9602](https://github.com/mrinmaydhar/ProxmoxVE/pull/9602))
+    - Add auth via requirepass to Valkey [@pshankinclarke](https://github.com/pshankinclarke) ([#9570](https://github.com/mrinmaydhar/ProxmoxVE/pull/9570))
 
   - #### 🔧 Refactor
 
-    - Refactor: 2FAuth [@tremor021](https://github.com/tremor021) ([#9582](https://github.com/community-scripts/ProxmoxVE/pull/9582))
-    - Refactor: Paperless-AI [@MickLesk](https://github.com/MickLesk) ([#9588](https://github.com/community-scripts/ProxmoxVE/pull/9588))
-    - Refactor: AdventureLog [@tremor021](https://github.com/tremor021) ([#9583](https://github.com/community-scripts/ProxmoxVE/pull/9583))
-    - CommaFeed: Bump Java and service file [@tremor021](https://github.com/tremor021) ([#9564](https://github.com/community-scripts/ProxmoxVE/pull/9564))
-    - Refactor: Docmost [@tremor021](https://github.com/tremor021) ([#9563](https://github.com/community-scripts/ProxmoxVE/pull/9563))
-    - Cloudflared: Add repo via helper function [@tremor021](https://github.com/tremor021) ([#9565](https://github.com/community-scripts/ProxmoxVE/pull/9565))
+    - Refactor: 2FAuth [@tremor021](https://github.com/tremor021) ([#9582](https://github.com/mrinmaydhar/ProxmoxVE/pull/9582))
+    - Refactor: Paperless-AI [@MickLesk](https://github.com/MickLesk) ([#9588](https://github.com/mrinmaydhar/ProxmoxVE/pull/9588))
+    - Refactor: AdventureLog [@tremor021](https://github.com/tremor021) ([#9583](https://github.com/mrinmaydhar/ProxmoxVE/pull/9583))
+    - CommaFeed: Bump Java and service file [@tremor021](https://github.com/tremor021) ([#9564](https://github.com/mrinmaydhar/ProxmoxVE/pull/9564))
+    - Refactor: Docmost [@tremor021](https://github.com/tremor021) ([#9563](https://github.com/mrinmaydhar/ProxmoxVE/pull/9563))
+    - Cloudflared: Add repo via helper function [@tremor021](https://github.com/tremor021) ([#9565](https://github.com/mrinmaydhar/ProxmoxVE/pull/9565))
 
 ### 🧰 Maintenance
 
@@ -61,7 +61,7 @@ Exercise vigilance regarding copycat or coat-tailing sites that seek to exploit 
 
   - #### 📝 Script Information
 
-    - Update category for "Wanderer" [@Lorondos](https://github.com/Lorondos) ([#9607](https://github.com/community-scripts/ProxmoxVE/pull/9607))
+    - Update category for "Wanderer" [@Lorondos](https://github.com/Lorondos) ([#9607](https://github.com/mrinmaydhar/ProxmoxVE/pull/9607))
 
 ## 2025-12-01
 
